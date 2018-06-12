@@ -75,6 +75,24 @@ openshift_logging_storage_volume_name=logging
 openshift_logging_storage_volume_size=10Gi
 openshift_logging_storage_labels={'storage': 'logging'}
 
+###############################
+# Authentication - LDAP
+# LDAP auth
+openshift_master_identity_providers=[{'name': 'judds_ldap', 'challenge': 'true', 'login': 'true', 'kind': 'LDAPPasswordIdentityProvider', 'attributes': {'id': ['dn'], 'email': ['mail'], 'name': ['cn'], 'preferredUsername': ['uid']}, 'bindDN': 'uid=admin,cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com', 'bindPassword': 'r3dh4t1!', 'ca': '/etc/origin/master/ipa-ca.crt', 'insecure': 'false', 'url': 'ldaps://ipa.shared.example.opentlc.com:636/cn=users,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com?uid?sub?(memberOf=cn=ocp-users,cn=groups,cn=accounts,dc=shared,dc=example,dc=opentlc,dc=com)'}]
+# #
+# # Configure LDAP CA certificate
+# # Specify either the ASCII contents of the certificate or the path to
+# # the local file that will be copied to the remote host. CA
+# # certificate contents will be copied to master systems and saved
+# # within /etc/origin/master/ with a filename matching the "ca" key set
+# # within the LDAPPasswordIdentityProvider.
+# #
+# #openshift_master_ldap_ca=<ca text>
+# # or
+openshift_master_ldap_ca_file='/root/ipa-ca.crt'
+
+
+
 
 ###########################################################################
 ### OpenShift Hosts
