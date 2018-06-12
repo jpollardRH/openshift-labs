@@ -1,0 +1,2015 @@
+2018-06-11 15:33:24,028 p=15871 u=root |  PLAY [Initialization Checkpoint Start] *******************************************************************************************
+2018-06-11 15:33:24,043 p=15871 u=root |  TASK [Set install initialization 'In Progress'] **********************************************************************************
+2018-06-11 15:33:24,081 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:24,089 p=15871 u=root |  PLAY [Populate config host groups] ***********************************************************************************************
+2018-06-11 15:33:24,095 p=15871 u=root |  TASK [Load group name mapping variables] *****************************************************************************************
+2018-06-11 15:33:24,114 p=15871 u=root |  ok: [localhost]
+2018-06-11 15:33:24,119 p=15871 u=root |  TASK [Evaluate groups - g_etcd_hosts or g_new_etcd_hosts required] ***************************************************************
+2018-06-11 15:33:24,137 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,141 p=15871 u=root |  TASK [Evaluate groups - g_master_hosts or g_new_master_hosts required] ***********************************************************
+2018-06-11 15:33:24,159 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,163 p=15871 u=root |  TASK [Evaluate groups - g_node_hosts or g_new_node_hosts required] ***************************************************************
+2018-06-11 15:33:24,181 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,185 p=15871 u=root |  TASK [Evaluate groups - g_lb_hosts required] *************************************************************************************
+2018-06-11 15:33:24,201 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,205 p=15871 u=root |  TASK [Evaluate groups - g_nfs_hosts required] ************************************************************************************
+2018-06-11 15:33:24,220 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,224 p=15871 u=root |  TASK [Evaluate groups - g_nfs_hosts is single host] ******************************************************************************
+2018-06-11 15:33:24,240 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,243 p=15871 u=root |  TASK [Evaluate groups - g_glusterfs_hosts required] ******************************************************************************
+2018-06-11 15:33:24,259 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,263 p=15871 u=root |  TASK [Evaluate groups - Fail if no etcd hosts group is defined] ******************************************************************
+2018-06-11 15:33:24,279 p=15871 u=root |  skipping: [localhost]
+2018-06-11 15:33:24,283 p=15871 u=root |  TASK [Evaluate oo_all_hosts] *****************************************************************************************************
+2018-06-11 15:33:24,332 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,338 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,345 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,351 p=15871 u=root |  ok: [localhost] => (item=infranode1.861b.internal)
+2018-06-11 15:33:24,358 p=15871 u=root |  ok: [localhost] => (item=infranode2.861b.internal)
+2018-06-11 15:33:24,364 p=15871 u=root |  ok: [localhost] => (item=node1.861b.internal)
+2018-06-11 15:33:24,372 p=15871 u=root |  ok: [localhost] => (item=node2.861b.internal)
+2018-06-11 15:33:24,378 p=15871 u=root |  ok: [localhost] => (item=node3.861b.internal)
+2018-06-11 15:33:24,385 p=15871 u=root |  ok: [localhost] => (item=loadbalancer1.861b.internal)
+2018-06-11 15:33:24,391 p=15871 u=root |  ok: [localhost] => (item=support1.861b.internal)
+2018-06-11 15:33:24,398 p=15871 u=root |  TASK [Evaluate oo_masters] *******************************************************************************************************
+2018-06-11 15:33:24,429 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,435 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,442 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,448 p=15871 u=root |  TASK [Evaluate oo_first_master] **************************************************************************************************
+2018-06-11 15:33:24,476 p=15871 u=root |  ok: [localhost]
+2018-06-11 15:33:24,480 p=15871 u=root |  TASK [Evaluate oo_new_etcd_to_config] ********************************************************************************************
+2018-06-11 15:33:24,498 p=15871 u=root |  TASK [Evaluate oo_masters_to_config] *********************************************************************************************
+2018-06-11 15:33:24,529 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,535 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,542 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,548 p=15871 u=root |  TASK [Evaluate oo_etcd_to_config] ************************************************************************************************
+2018-06-11 15:33:24,577 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,583 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,589 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,597 p=15871 u=root |  TASK [Evaluate oo_first_etcd] ****************************************************************************************************
+2018-06-11 15:33:24,623 p=15871 u=root |  ok: [localhost]
+2018-06-11 15:33:24,627 p=15871 u=root |  TASK [Evaluate oo_etcd_hosts_to_upgrade] *****************************************************************************************
+2018-06-11 15:33:24,651 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,656 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,661 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,666 p=15871 u=root |  TASK [Evaluate oo_etcd_hosts_to_backup] ******************************************************************************************
+2018-06-11 15:33:24,690 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,695 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,700 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,705 p=15871 u=root |  TASK [Evaluate oo_nodes_to_config] ***********************************************************************************************
+2018-06-11 15:33:24,736 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,741 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,748 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,755 p=15871 u=root |  ok: [localhost] => (item=infranode1.861b.internal)
+2018-06-11 15:33:24,762 p=15871 u=root |  ok: [localhost] => (item=infranode2.861b.internal)
+2018-06-11 15:33:24,769 p=15871 u=root |  ok: [localhost] => (item=node1.861b.internal)
+2018-06-11 15:33:24,776 p=15871 u=root |  ok: [localhost] => (item=node2.861b.internal)
+2018-06-11 15:33:24,782 p=15871 u=root |  ok: [localhost] => (item=node3.861b.internal)
+2018-06-11 15:33:24,788 p=15871 u=root |  TASK [Add master to oo_nodes_to_config] ******************************************************************************************
+2018-06-11 15:33:24,811 p=15871 u=root |  skipping: [localhost] => (item=master1.861b.internal) 
+2018-06-11 15:33:24,818 p=15871 u=root |  skipping: [localhost] => (item=master2.861b.internal) 
+2018-06-11 15:33:24,825 p=15871 u=root |  skipping: [localhost] => (item=master3.861b.internal) 
+2018-06-11 15:33:24,830 p=15871 u=root |  TASK [Evaluate oo_lb_to_config] **************************************************************************************************
+2018-06-11 15:33:24,857 p=15871 u=root |  ok: [localhost] => (item=loadbalancer1.861b.internal)
+2018-06-11 15:33:24,862 p=15871 u=root |  TASK [Evaluate oo_nfs_to_config] *************************************************************************************************
+2018-06-11 15:33:24,889 p=15871 u=root |  ok: [localhost] => (item=support1.861b.internal)
+2018-06-11 15:33:24,894 p=15871 u=root |  TASK [Evaluate oo_glusterfs_to_config] *******************************************************************************************
+2018-06-11 15:33:24,914 p=15871 u=root |  TASK [Evaluate oo_etcd_to_migrate] ***********************************************************************************************
+2018-06-11 15:33:24,940 p=15871 u=root |  ok: [localhost] => (item=master1.861b.internal)
+2018-06-11 15:33:24,946 p=15871 u=root |  ok: [localhost] => (item=master2.861b.internal)
+2018-06-11 15:33:24,952 p=15871 u=root |  ok: [localhost] => (item=master3.861b.internal)
+2018-06-11 15:33:24,960 p=15871 u=root |  PLAY [Ensure that all non-node hosts are accessible] *****************************************************************************
+2018-06-11 15:33:24,967 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:27,143 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:27,250 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:27,278 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:27,329 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:27,349 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:27,374 p=15871 u=root |  PLAY [Initialize basic host facts] ***********************************************************************************************
+2018-06-11 15:33:27,385 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:28,118 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:28,143 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:28,164 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:28,183 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:28,204 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:29,450 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:29,574 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:29,673 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:29,961 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:30,256 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:30,280 p=15871 u=root |  TASK [openshift_sanitize_inventory : include_tasks] ******************************************************************************
+2018-06-11 15:33:30,458 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/openshift_sanitize_inventory/tasks/deprecations.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:33:30,499 p=15871 u=root |  TASK [openshift_sanitize_inventory : Check for usage of deprecated variables] ****************************************************
+2018-06-11 15:33:30,634 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:30,635 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:30,635 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:30,638 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:30,652 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:30,655 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:30,655 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:30,663 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:30,675 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:30,687 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:30,697 p=15871 u=root |  TASK [openshift_sanitize_inventory : debug] **************************************************************************************
+2018-06-11 15:33:30,723 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:30,735 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:30,747 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:30,757 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:30,769 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:30,780 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:30,792 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:30,804 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:30,805 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:30,813 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:30,823 p=15871 u=root |  TASK [openshift_sanitize_inventory : set_stats] **********************************************************************************
+2018-06-11 15:33:30,848 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:30,860 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:30,871 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:30,882 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:30,893 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:30,906 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:30,917 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:30,928 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:30,929 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:30,939 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:30,948 p=15871 u=root |  TASK [openshift_sanitize_inventory : Assign deprecated variables to correct counterparts] ****************************************
+2018-06-11 15:33:31,199 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/openshift_sanitize_inventory/tasks/__deprecations_logging.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:33:31,204 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/openshift_sanitize_inventory/tasks/__deprecations_metrics.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:33:31,218 p=15871 u=root |  TASK [openshift_sanitize_inventory : conditional_set_fact] ***********************************************************************
+2018-06-11 15:33:31,310 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:31,322 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:31,334 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:31,343 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:31,374 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:31,375 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:31,380 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:31,381 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:31,383 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:31,393 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:31,403 p=15871 u=root |  TASK [openshift_sanitize_inventory : set_fact] ***********************************************************************************
+2018-06-11 15:33:31,492 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:31,507 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:31,519 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:31,521 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:31,522 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:31,524 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:31,525 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:31,536 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:31,544 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:31,557 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:31,568 p=15871 u=root |  TASK [openshift_sanitize_inventory : conditional_set_fact] ***********************************************************************
+2018-06-11 15:33:31,690 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:31,691 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:31,692 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:31,725 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:31,725 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:31,726 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:31,730 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:31,732 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:31,740 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:31,748 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:31,758 p=15871 u=root |  TASK [openshift_sanitize_inventory : Standardize on latest variable names] *******************************************************
+2018-06-11 15:33:31,866 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:31,867 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:31,868 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:31,869 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:31,869 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:31,870 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:31,871 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:31,872 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:31,881 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:31,894 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:31,903 p=15871 u=root |  TASK [openshift_sanitize_inventory : Normalize openshift_release] ****************************************************************
+2018-06-11 15:33:31,930 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:31,941 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:31,953 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:31,964 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:31,975 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:31,986 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:31,998 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,009 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,010 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,019 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,028 p=15871 u=root |  TASK [openshift_sanitize_inventory : Abort when openshift_release is invalid] ****************************************************
+2018-06-11 15:33:32,054 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,066 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,077 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,089 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,100 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,111 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:32,123 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,135 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,136 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,145 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,154 p=15871 u=root |  TASK [openshift_sanitize_inventory : include_tasks] ******************************************************************************
+2018-06-11 15:33:32,180 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,192 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,204 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,214 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,226 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,237 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:32,248 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,259 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,261 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,270 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,279 p=15871 u=root |  TASK [openshift_sanitize_inventory : Ensure clusterid is set along with the cloudprovider] ***************************************
+2018-06-11 15:33:32,306 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,316 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,328 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,339 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,350 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,361 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:32,373 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,385 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,386 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,397 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,406 p=15871 u=root |  TASK [openshift_sanitize_inventory : Ensure ansible_service_broker_remove and ansible_service_broker_install are mutually exclusive] ***
+2018-06-11 15:33:32,432 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,444 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,456 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,467 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,479 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,490 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:32,501 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,513 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,514 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,523 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,532 p=15871 u=root |  TASK [openshift_sanitize_inventory : Ensure template_service_broker_remove and template_service_broker_install are mutually exclusive] ***
+2018-06-11 15:33:32,559 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,571 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,582 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,594 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,605 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,618 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:32,628 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,640 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,640 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,649 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,658 p=15871 u=root |  TASK [openshift_sanitize_inventory : Ensure that all requires vsphere configuration variables are set] ***************************
+2018-06-11 15:33:32,684 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,696 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,707 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,719 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,730 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,742 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:32,754 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,765 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,766 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,777 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,787 p=15871 u=root |  TASK [openshift_sanitize_inventory : Ensure removed web console extension variables are not set] *********************************
+2018-06-11 15:33:32,814 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,826 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,837 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,849 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,860 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,873 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:32,883 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:32,895 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:32,895 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:32,905 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:32,914 p=15871 u=root |  TASK [openshift_sanitize_inventory : Ensure that web console port matches API server port] ***************************************
+2018-06-11 15:33:32,940 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:32,953 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:32,964 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:32,975 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:32,986 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:32,999 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:33,010 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:33,022 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:33,023 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:33,031 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:33,040 p=15871 u=root |  TASK [Detecting Operating System from ostree_booted] *****************************************************************************
+2018-06-11 15:33:33,544 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:33,550 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:33,563 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:33,569 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:33,571 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:33,572 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:33,574 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:33,596 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:33,596 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:33,643 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:33,651 p=15871 u=root |  TASK [set openshift_deployment_type if unset] ************************************************************************************
+2018-06-11 15:33:33,697 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:33,710 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:33,762 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:33,762 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:33,763 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:33,763 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:33,764 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:33,770 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:33,780 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:33,790 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:33,799 p=15871 u=root |  TASK [initialize_facts set fact openshift_is_atomic and openshift_is_containerized] **********************************************
+2018-06-11 15:33:33,906 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:33,907 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:33,908 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:33,908 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:33,909 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:33,909 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:33,910 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:33,913 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:33,929 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:33,931 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:33,939 p=15871 u=root |  TASK [Set use_crio to True if cri-o rpm is requested] ****************************************************************************
+2018-06-11 15:33:33,963 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:33,975 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:33,986 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:33,998 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:34,009 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:34,021 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:34,031 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:34,043 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:34,044 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:34,053 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:34,062 p=15871 u=root |  TASK [Determine Atomic Host Docker Version] **************************************************************************************
+2018-06-11 15:33:34,088 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:34,099 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:34,111 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:34,122 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:34,133 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:34,145 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:34,156 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:34,167 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:34,168 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:34,177 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:34,186 p=15871 u=root |  TASK [assert atomic host docker version is 1.12 or later] ************************************************************************
+2018-06-11 15:33:34,213 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:34,224 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:34,236 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:34,247 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:34,260 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:34,271 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:34,281 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:34,292 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:34,293 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:34,303 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:34,310 p=15871 u=root |  PLAY [Initialize special first-master variables] *********************************************************************************
+2018-06-11 15:33:34,318 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:34,911 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:34,933 p=15871 u=root |  TASK [stat] **********************************************************************************************************************
+2018-06-11 15:33:35,333 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:35,341 p=15871 u=root |  TASK [slurp] *********************************************************************************************************************
+2018-06-11 15:33:35,359 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:35,366 p=15871 u=root |  TASK [set_fact] ******************************************************************************************************************
+2018-06-11 15:33:35,384 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:35,392 p=15871 u=root |  TASK [set_fact] ******************************************************************************************************************
+2018-06-11 15:33:35,428 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:35,433 p=15871 u=root |  PLAY [Disable web console if required] *******************************************************************************************
+2018-06-11 15:33:35,443 p=15871 u=root |  TASK [set_fact] ******************************************************************************************************************
+2018-06-11 15:33:35,467 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:35,468 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:35,479 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:35,488 p=15871 u=root |  PLAY [Install packages necessary for installer] **********************************************************************************
+2018-06-11 15:33:35,498 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:36,127 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:36,151 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:36,175 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:36,199 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:36,224 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:36,248 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:36,273 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:36,295 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:36,315 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:36,338 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:36,361 p=15871 u=root |  TASK [Ensure openshift-ansible installer package deps are installed] *************************************************************
+2018-06-11 15:33:37,249 p=15871 u=root |  ok: [master1.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,286 p=15871 u=root |  ok: [master2.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,314 p=15871 u=root |  ok: [infranode1.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,341 p=15871 u=root |  ok: [loadbalancer1.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,392 p=15871 u=root |  ok: [node2.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,455 p=15871 u=root |  ok: [support1.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,465 p=15871 u=root |  ok: [node3.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,475 p=15871 u=root |  ok: [infranode2.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,509 p=15871 u=root |  ok: [master3.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,528 p=15871 u=root |  ok: [node1.861b.internal] => (item=iproute)
+2018-06-11 15:33:37,976 p=15871 u=root |  ok: [master1.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,038 p=15871 u=root |  ok: [node2.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,050 p=15871 u=root |  ok: [support1.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,082 p=15871 u=root |  ok: [master2.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,108 p=15871 u=root |  ok: [infranode2.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,109 p=15871 u=root |  ok: [infranode1.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,125 p=15871 u=root |  ok: [node3.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,145 p=15871 u=root |  ok: [loadbalancer1.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,161 p=15871 u=root |  ok: [node1.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,194 p=15871 u=root |  ok: [master3.861b.internal] => (item=dbus-python)
+2018-06-11 15:33:38,630 p=15871 u=root |  ok: [master1.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,681 p=15871 u=root |  ok: [node2.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,685 p=15871 u=root |  ok: [support1.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,719 p=15871 u=root |  ok: [master2.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,770 p=15871 u=root |  ok: [node3.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,781 p=15871 u=root |  ok: [loadbalancer1.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,823 p=15871 u=root |  ok: [infranode1.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,829 p=15871 u=root |  ok: [infranode2.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,835 p=15871 u=root |  ok: [node1.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:38,894 p=15871 u=root |  ok: [master3.861b.internal] => (item=PyYAML)
+2018-06-11 15:33:39,294 p=15871 u=root |  ok: [master1.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,329 p=15871 u=root |  ok: [support1.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,330 p=15871 u=root |  ok: [node2.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,356 p=15871 u=root |  ok: [master2.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,419 p=15871 u=root |  ok: [node3.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,430 p=15871 u=root |  ok: [infranode1.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,466 p=15871 u=root |  ok: [loadbalancer1.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,471 p=15871 u=root |  ok: [infranode2.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,504 p=15871 u=root |  ok: [node1.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,597 p=15871 u=root |  ok: [master3.861b.internal] => (item=python-ipaddress)
+2018-06-11 15:33:39,931 p=15871 u=root |  ok: [master1.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:39,961 p=15871 u=root |  ok: [support1.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:39,995 p=15871 u=root |  ok: [master2.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,022 p=15871 u=root |  ok: [node2.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,075 p=15871 u=root |  ok: [node3.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,080 p=15871 u=root |  ok: [infranode1.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,094 p=15871 u=root |  ok: [loadbalancer1.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,139 p=15871 u=root |  ok: [infranode2.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,187 p=15871 u=root |  ok: [node1.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,294 p=15871 u=root |  ok: [master3.861b.internal] => (item=yum-utils)
+2018-06-11 15:33:40,305 p=15871 u=root |  TASK [Ensure various deps for running system containers are installed] ***********************************************************
+2018-06-11 15:33:40,474 p=15871 u=root |  skipping: [master1.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,475 p=15871 u=root |  skipping: [master1.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,475 p=15871 u=root |  skipping: [master1.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,476 p=15871 u=root |  skipping: [master2.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,477 p=15871 u=root |  skipping: [master2.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,477 p=15871 u=root |  skipping: [master2.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,478 p=15871 u=root |  skipping: [master3.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,479 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,480 p=15871 u=root |  skipping: [master3.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,480 p=15871 u=root |  skipping: [master3.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,481 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,482 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,484 p=15871 u=root |  skipping: [node1.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,485 p=15871 u=root |  skipping: [node1.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,485 p=15871 u=root |  skipping: [node1.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,487 p=15871 u=root |  skipping: [node3.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,487 p=15871 u=root |  skipping: [node3.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,488 p=15871 u=root |  skipping: [node3.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,489 p=15871 u=root |  skipping: [node2.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,489 p=15871 u=root |  skipping: [node2.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,490 p=15871 u=root |  skipping: [node2.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,491 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,492 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,492 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,493 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,494 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,494 p=15871 u=root |  skipping: [support1.861b.internal] => (item=atomic) 
+2018-06-11 15:33:40,507 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,509 p=15871 u=root |  skipping: [support1.861b.internal] => (item=ostree) 
+2018-06-11 15:33:40,526 p=15871 u=root |  skipping: [support1.861b.internal] => (item=runc) 
+2018-06-11 15:33:40,537 p=15871 u=root |  PLAY [Initialize cluster facts] **************************************************************************************************
+2018-06-11 15:33:40,547 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:41,303 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:41,326 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:41,357 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:41,381 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:41,408 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:41,431 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:41,451 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:41,469 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:41,491 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:41,767 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:41,790 p=15871 u=root |  TASK [Gather Cluster facts] ******************************************************************************************************
+2018-06-11 15:33:42,919 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:33:42,959 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:33:42,970 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:33:42,974 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:33:42,985 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:33:42,992 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:33:43,001 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:33:43,007 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:33:43,046 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:33:43,052 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:33:43,064 p=15871 u=root |  TASK [Set fact of no_proxy_internal_hostnames] ***********************************************************************************
+2018-06-11 15:33:43,091 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:43,102 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:43,115 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:43,126 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:43,141 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:43,152 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:43,164 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:43,176 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:43,176 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:43,186 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:43,195 p=15871 u=root |  TASK [Initialize openshift.node.sdn_mtu] *****************************************************************************************
+2018-06-11 15:33:43,987 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:33:44,002 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:33:44,035 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:33:44,062 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:33:44,078 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:33:44,085 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:33:44,099 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:33:44,106 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:33:44,111 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:33:44,169 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:33:44,179 p=15871 u=root |  PLAY [Initialize etcd host variables] ********************************************************************************************
+2018-06-11 15:33:44,188 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:44,783 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:44,809 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:44,835 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:44,858 p=15871 u=root |  TASK [set_fact] ******************************************************************************************************************
+2018-06-11 15:33:44,935 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:44,946 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:44,961 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:44,969 p=15871 u=root |  TASK [set_fact] ******************************************************************************************************************
+2018-06-11 15:33:45,005 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:45,016 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:45,029 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:45,038 p=15871 u=root |  PLAY [Determine openshift_version to configure on first master] ******************************************************************
+2018-06-11 15:33:45,047 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:45,063 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:45,072 p=15871 u=root |  TASK [include_role] **************************************************************************************************************
+2018-06-11 15:33:45,088 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:45,096 p=15871 u=root |  TASK [debug] *********************************************************************************************************************
+2018-06-11 15:33:45,111 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:45,121 p=15871 u=root |  PLAY [Set openshift_version for etcd, node, and master hosts] ********************************************************************
+2018-06-11 15:33:45,121 p=15871 u=root |  skipping: no hosts matched
+2018-06-11 15:33:45,124 p=15871 u=root |  PLAY [Ensure the requested version packages are available.] **********************************************************************
+2018-06-11 15:33:45,124 p=15871 u=root |  skipping: no hosts matched
+2018-06-11 15:33:45,128 p=15871 u=root |  PLAY [Verify Requirements] *******************************************************************************************************
+2018-06-11 15:33:45,137 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:45,735 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:45,759 p=15871 u=root |  TASK [Run variable sanity checks] ************************************************************************************************
+2018-06-11 15:33:46,397 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:46,402 p=15871 u=root |  PLAY [Initialization Checkpoint End] *********************************************************************************************
+2018-06-11 15:33:46,413 p=15871 u=root |  TASK [Set install initialization 'Complete'] *************************************************************************************
+2018-06-11 15:33:46,454 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:46,461 p=15871 u=root |  PLAY [Validate node hostnames] ***************************************************************************************************
+2018-06-11 15:33:46,472 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:47,109 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:47,133 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:47,165 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:47,190 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:47,213 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:47,236 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:47,259 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:47,282 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:47,307 p=15871 u=root |  TASK [Query DNS for IP address of master1.861b.internal] *************************************************************************
+2018-06-11 15:33:47,832 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:47,840 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:47,842 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:47,844 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:47,850 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:47,851 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:47,856 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:47,867 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:47,876 p=15871 u=root |  TASK [Validate openshift_hostname when defined] **********************************************************************************
+2018-06-11 15:33:47,902 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:47,914 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:47,926 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:47,937 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:47,949 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:47,961 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:47,965 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:47,978 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:47,987 p=15871 u=root |  TASK [Validate openshift_ip exists on node when defined] *************************************************************************
+2018-06-11 15:33:48,013 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,024 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,036 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,049 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:48,060 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:48,072 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:48,073 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:48,087 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:48,097 p=15871 u=root |  PLAY [Setup yum repositories for all hosts] **************************************************************************************
+2018-06-11 15:33:48,111 p=15871 u=root |  TASK [rhel_subscribe : fail] *****************************************************************************************************
+2018-06-11 15:33:48,136 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,149 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,161 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,173 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:48,185 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:48,197 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:48,208 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:48,219 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:48,225 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:48,237 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:48,246 p=15871 u=root |  TASK [rhel_subscribe : Install Red Hat Subscription manager] *********************************************************************
+2018-06-11 15:33:48,274 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,286 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,299 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,312 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:48,324 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:48,336 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:48,348 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:48,360 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:48,364 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:48,378 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:48,388 p=15871 u=root |  TASK [rhel_subscribe : Is host already registered?] ******************************************************************************
+2018-06-11 15:33:48,415 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,427 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,438 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,451 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:48,463 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:48,476 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:48,487 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:48,499 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:48,503 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:48,517 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:48,526 p=15871 u=root |  TASK [rhel_subscribe : Register host] ********************************************************************************************
+2018-06-11 15:33:48,552 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,564 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,576 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,587 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:48,600 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:48,612 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:48,623 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:48,635 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:48,640 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:48,652 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:48,662 p=15871 u=root |  TASK [rhel_subscribe : fail] *****************************************************************************************************
+2018-06-11 15:33:48,688 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,700 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,711 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,723 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:48,736 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:48,748 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:48,759 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:48,771 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:48,776 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:48,788 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:48,798 p=15871 u=root |  TASK [rhel_subscribe : Determine if OpenShift Pool Already Attached] *************************************************************
+2018-06-11 15:33:48,825 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,837 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,848 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,860 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:48,873 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:48,885 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:48,897 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:48,909 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:48,914 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:48,926 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:48,936 p=15871 u=root |  TASK [rhel_subscribe : Attach to OpenShift Pool] *********************************************************************************
+2018-06-11 15:33:48,963 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:48,975 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:48,987 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:48,999 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:49,011 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:49,023 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:49,035 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:49,046 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:49,054 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:49,066 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:49,076 p=15871 u=root |  TASK [rhel_subscribe : include_tasks] ********************************************************************************************
+2018-06-11 15:33:49,103 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:49,115 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:49,126 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:49,142 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:49,154 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:49,167 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:49,178 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:49,190 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:49,195 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:49,207 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:49,217 p=15871 u=root |  TASK [openshift_repos : openshift_repos detect ostree] ***************************************************************************
+2018-06-11 15:33:49,644 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:49,658 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:49,688 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:49,711 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:49,718 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:49,723 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:49,735 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:49,741 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:49,750 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:49,779 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:49,789 p=15871 u=root |  TASK [openshift_repos : Ensure libselinux-python is installed] *******************************************************************
+2018-06-11 15:33:50,442 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:50,467 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:50,505 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:50,515 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:50,547 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:50,548 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:50,549 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:50,551 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:50,554 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:50,556 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:50,565 p=15871 u=root |  TASK [openshift_repos : Remove openshift_additional.repo file] *******************************************************************
+2018-06-11 15:33:51,159 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:51,159 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:51,164 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:51,165 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:51,167 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:51,170 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:51,177 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:51,182 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:51,184 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:51,193 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:51,203 p=15871 u=root |  TASK [openshift_repos : Create any additional repos that are defined] ************************************************************
+2018-06-11 15:33:51,338 p=15871 u=root |  TASK [openshift_repos : include_tasks] *******************************************************************************************
+2018-06-11 15:33:51,375 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:51,387 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:51,399 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:51,411 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:51,425 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:51,437 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:51,449 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:51,452 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:51,463 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:51,478 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:51,487 p=15871 u=root |  TASK [openshift_repos : include_tasks] *******************************************************************************************
+2018-06-11 15:33:51,525 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:51,537 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:51,549 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:51,561 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:51,574 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:51,586 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:51,598 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:51,601 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:51,614 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:51,626 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:51,635 p=15871 u=root |  TASK [openshift_repos : Ensure clean repo cache in the event repos have been changed manually] ***********************************
+2018-06-11 15:33:51,691 p=15871 u=root |  changed: [master1.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,734 p=15871 u=root |  changed: [master2.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,748 p=15871 u=root |  changed: [infranode1.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,762 p=15871 u=root |  changed: [master3.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,771 p=15871 u=root |  changed: [infranode2.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,773 p=15871 u=root |  changed: [node1.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,775 p=15871 u=root |  changed: [node2.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,786 p=15871 u=root |  changed: [node3.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,791 p=15871 u=root |  changed: [loadbalancer1.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,807 p=15871 u=root |  changed: [support1.861b.internal] => {
+    "msg": "First run of openshift_repos"
+}
+2018-06-11 15:33:51,816 p=15871 u=root |  TASK [openshift_repos : Record that openshift_repos already ran] *****************************************************************
+2018-06-11 15:33:51,950 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:51,951 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:51,952 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:51,952 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:51,953 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:51,953 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:51,954 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:51,962 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:51,974 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:51,976 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:51,978 p=15871 u=root |  RUNNING HANDLER [openshift_repos : refresh cache] ********************************************************************************
+2018-06-11 15:33:52,654 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:33:52,675 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:33:52,700 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:33:52,708 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:33:52,711 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:33:52,713 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:33:52,723 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:33:52,724 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:33:52,732 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:33:52,741 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:33:52,753 p=15871 u=root |  PLAY [Configure os_firewall] *****************************************************************************************************
+2018-06-11 15:33:52,764 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:33:53,359 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:53,408 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:53,447 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:53,471 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:53,493 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:53,522 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:53,545 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:53,569 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:53,592 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:53,615 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:53,640 p=15871 u=root |  TASK [os_firewall : Detecting Atomic Host Operating System] **********************************************************************
+2018-06-11 15:33:54,140 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:54,205 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:54,211 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:54,234 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:54,245 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:54,245 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:54,314 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:54,314 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:54,327 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:54,336 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:54,345 p=15871 u=root |  TASK [os_firewall : Set fact r_os_firewall_is_atomic] ****************************************************************************
+2018-06-11 15:33:54,524 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:54,525 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:54,526 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:54,526 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:54,559 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:54,570 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:54,570 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:54,593 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:54,613 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:54,620 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:54,628 p=15871 u=root |  TASK [os_firewall : include_tasks] ***********************************************************************************************
+2018-06-11 15:33:54,656 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:54,667 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:33:54,679 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:33:54,692 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:33:54,704 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:33:54,718 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:33:54,730 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:33:54,741 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:33:54,743 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:33:54,756 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:33:54,765 p=15871 u=root |  TASK [os_firewall : include_tasks] ***********************************************************************************************
+2018-06-11 15:33:55,030 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/os_firewall/tasks/iptables.yml for master1.861b.internal, master2.861b.internal, loadbalancer1.861b.internal, master3.861b.internal, infranode2.861b.internal, infranode1.861b.internal, support1.861b.internal, node2.861b.internal, node1.861b.internal, node3.861b.internal
+2018-06-11 15:33:55,045 p=15871 u=root |  TASK [os_firewall : Ensure firewalld service is not enabled] *********************************************************************
+2018-06-11 15:33:55,641 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:33:55,649 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:33:55,662 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:33:55,673 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:33:55,677 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:33:55,678 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:33:55,680 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:33:55,683 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:33:55,685 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:33:55,687 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:33:55,697 p=15871 u=root |  TASK [os_firewall : Wait 10 seconds after disabling firewalld] *******************************************************************
+2018-06-11 15:33:55,714 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:33:55,723 p=15871 u=root |  TASK [os_firewall : Install iptables packages] ***********************************************************************************
+2018-06-11 15:33:56,383 p=15871 u=root |  ok: [master1.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,404 p=15871 u=root |  ok: [master2.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,480 p=15871 u=root |  ok: [infranode1.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,491 p=15871 u=root |  ok: [support1.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,492 p=15871 u=root |  ok: [infranode2.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,537 p=15871 u=root |  ok: [master3.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,549 p=15871 u=root |  ok: [loadbalancer1.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,554 p=15871 u=root |  ok: [node2.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,562 p=15871 u=root |  ok: [node1.861b.internal] => (item=iptables)
+2018-06-11 15:33:56,565 p=15871 u=root |  ok: [node3.861b.internal] => (item=iptables)
+2018-06-11 15:33:57,044 p=15871 u=root |  ok: [master2.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,062 p=15871 u=root |  ok: [master1.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,132 p=15871 u=root |  ok: [infranode1.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,136 p=15871 u=root |  ok: [support1.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,163 p=15871 u=root |  ok: [loadbalancer1.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,166 p=15871 u=root |  ok: [infranode2.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,168 p=15871 u=root |  ok: [node2.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,174 p=15871 u=root |  ok: [master3.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,175 p=15871 u=root |  ok: [node1.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,184 p=15871 u=root |  ok: [node3.861b.internal] => (item=iptables-services)
+2018-06-11 15:33:57,258 p=15871 u=root |  TASK [os_firewall : Start and enable iptables service] ***************************************************************************
+2018-06-11 15:33:57,951 p=15871 u=root |  changed: [master1.861b.internal -> loadbalancer1.861b.internal] => (item=loadbalancer1.861b.internal)
+2018-06-11 15:33:58,509 p=15871 u=root |  changed: [master1.861b.internal -> master1.861b.internal] => (item=master1.861b.internal)
+2018-06-11 15:33:59,126 p=15871 u=root |  changed: [master1.861b.internal -> master2.861b.internal] => (item=master2.861b.internal)
+2018-06-11 15:33:59,724 p=15871 u=root |  changed: [master1.861b.internal -> master3.861b.internal] => (item=master3.861b.internal)
+2018-06-11 15:34:00,299 p=15871 u=root |  changed: [master1.861b.internal -> infranode1.861b.internal] => (item=infranode1.861b.internal)
+2018-06-11 15:34:00,912 p=15871 u=root |  changed: [master1.861b.internal -> infranode2.861b.internal] => (item=infranode2.861b.internal)
+2018-06-11 15:34:01,661 p=15871 u=root |  changed: [master1.861b.internal -> node1.861b.internal] => (item=node1.861b.internal)
+2018-06-11 15:34:02,245 p=15871 u=root |  changed: [master1.861b.internal -> node2.861b.internal] => (item=node2.861b.internal)
+2018-06-11 15:34:02,834 p=15871 u=root |  changed: [master1.861b.internal -> node3.861b.internal] => (item=node3.861b.internal)
+2018-06-11 15:34:03,475 p=15871 u=root |  changed: [master1.861b.internal -> support1.861b.internal] => (item=support1.861b.internal)
+2018-06-11 15:34:03,561 p=15871 u=root |  TASK [os_firewall : need to pause here, otherwise the iptables service starting can sometimes cause ssh to fail] *****************
+2018-06-11 15:34:03,598 p=15871 u=root |  Pausing for 10 seconds
+2018-06-11 15:34:03,598 p=15871 u=root |  (ctrl+C then 'C' = continue early, ctrl+C then 'A' = abort)
+2018-06-11 15:34:13,600 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:13,612 p=15871 u=root |  PLAY [create oo_hosts_containerized_managed_true host group] *********************************************************************
+2018-06-11 15:34:13,620 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:34:14,161 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:14,238 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:14,257 p=15871 u=root |  TASK [group_by] ******************************************************************************************************************
+2018-06-11 15:34:14,292 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:14,303 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:14,315 p=15871 u=root |  PLAY [oo_nodes_to_config:oo_hosts_containerized_managed_true] ********************************************************************
+2018-06-11 15:34:14,327 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:34:14,963 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:14,992 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:15,013 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:34:15,038 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:34:15,079 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:34:15,124 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:34:15,168 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:34:15,212 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:34:15,256 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:34:15,278 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:15,302 p=15871 u=root |  TASK [container_runtime : Setup the docker-storage for overlay] ******************************************************************
+2018-06-11 15:34:15,333 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:15,346 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:15,359 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:15,372 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:15,386 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:15,399 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:15,413 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:15,426 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:15,427 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:15,438 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:15,449 p=15871 u=root |  PLAY [create oo_hosts_containerized_managed_true host group] *********************************************************************
+2018-06-11 15:34:15,456 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:34:16,036 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:16,098 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:16,117 p=15871 u=root |  TASK [group_by] ******************************************************************************************************************
+2018-06-11 15:34:16,202 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:16,215 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:16,227 p=15871 u=root |  PLAY [oo_nodes_to_config:oo_hosts_containerized_managed_true] ********************************************************************
+2018-06-11 15:34:16,242 p=15871 u=root |  TASK [Gathering Facts] ***********************************************************************************************************
+2018-06-11 15:34:17,004 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:34:17,075 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:17,102 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:34:17,127 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:17,147 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:17,168 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:34:17,192 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:34:17,215 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:34:17,238 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:34:17,261 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:34:17,286 p=15871 u=root |  TASK [openshift_excluder : Install excluders] ************************************************************************************
+2018-06-11 15:34:17,478 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/openshift_excluder/tasks/install.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:34:17,494 p=15871 u=root |  TASK [openshift_excluder : Install docker excluder - yum] ************************************************************************
+2018-06-11 15:34:38,031 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:34:39,013 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:34:39,624 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:34:39,911 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:34:39,928 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:34:42,759 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:34:42,769 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:34:43,792 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:34:46,543 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:34:49,467 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:34:49,478 p=15871 u=root |  TASK [openshift_excluder : Install docker excluder - dnf] ************************************************************************
+2018-06-11 15:34:49,520 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:49,533 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:49,546 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:49,559 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:49,573 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:49,585 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:49,598 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:49,599 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:49,608 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:49,621 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:49,631 p=15871 u=root |  TASK [openshift_excluder : Install openshift excluder - yum] *********************************************************************
+2018-06-11 15:34:49,660 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:49,673 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:49,686 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:49,698 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:49,711 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:49,725 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:49,737 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:49,750 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:49,752 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:49,767 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:49,777 p=15871 u=root |  TASK [openshift_excluder : Install openshift excluder - dnf] *********************************************************************
+2018-06-11 15:34:49,806 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:49,819 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:49,832 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:49,845 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:49,858 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:49,872 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:49,884 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:49,898 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:49,900 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:49,915 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:49,925 p=15871 u=root |  TASK [openshift_excluder : set_fact] *********************************************************************************************
+2018-06-11 15:34:50,033 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:50,047 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:34:50,048 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:34:50,049 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:34:50,049 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:34:50,051 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:34:50,052 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:34:50,057 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:34:50,068 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:50,084 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:50,095 p=15871 u=root |  TASK [openshift_excluder : Enable excluders] *************************************************************************************
+2018-06-11 15:34:50,278 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/openshift_excluder/tasks/exclude.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:34:50,316 p=15871 u=root |  TASK [openshift_excluder : Check for docker-excluder] ****************************************************************************
+2018-06-11 15:34:50,776 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:50,790 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:34:50,815 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:34:50,817 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:34:50,840 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:34:50,847 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:34:50,860 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:34:50,864 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:50,887 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:34:50,895 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:50,906 p=15871 u=root |  TASK [openshift_excluder : Enable docker excluder] *******************************************************************************
+2018-06-11 15:34:51,382 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:34:51,412 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:34:51,430 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:34:51,437 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:34:51,456 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:34:51,491 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:34:51,494 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:34:51,495 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:34:51,510 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:34:51,519 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:34:51,529 p=15871 u=root |  TASK [openshift_excluder : Check for openshift excluder] *************************************************************************
+2018-06-11 15:34:52,068 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:34:52,088 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:52,090 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:34:52,118 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:34:52,128 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:34:52,173 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:34:52,177 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:34:52,194 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:52,208 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:34:52,223 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:52,233 p=15871 u=root |  TASK [openshift_excluder : Enable openshift excluder] ****************************************************************************
+2018-06-11 15:34:52,262 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:52,275 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:52,288 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:52,301 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:52,313 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:52,327 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:52,339 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:52,351 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:52,352 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:52,362 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:52,372 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:34:52,570 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/container_runtime/tasks/common/pre.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:34:52,594 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:34:52,623 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:52,638 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:52,651 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:52,663 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:52,676 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:52,689 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:52,702 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:52,714 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:52,715 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:52,727 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:52,737 p=15871 u=root |  TASK [container_runtime : Add enterprise registry, if necessary] *****************************************************************
+2018-06-11 15:34:52,927 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:34:52,928 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:34:52,929 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:52,968 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:34:52,978 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:34:53,020 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:34:53,027 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:34:53,048 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:34:53,055 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:53,077 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:53,088 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:34:53,116 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:53,128 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:53,140 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:53,153 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:53,166 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:53,178 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:53,191 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:53,203 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:53,209 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:53,223 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:53,234 p=15871 u=root |  TASK [container_runtime : Get current installed Docker version] ******************************************************************
+2018-06-11 15:34:53,996 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:34:54,015 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:34:54,020 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:34:54,054 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:34:54,059 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:34:54,107 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:34:54,109 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:34:54,114 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:34:54,153 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:34:54,451 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:34:54,461 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:34:54,661 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/container_runtime/tasks/docker_sanity.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:34:54,729 p=15871 u=root |  TASK [container_runtime : Error out if Docker pre-installed but too old] *********************************************************
+2018-06-11 15:34:54,757 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:54,772 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:54,784 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:54,797 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:54,811 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:54,824 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:54,836 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:54,849 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:54,851 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:54,864 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:54,874 p=15871 u=root |  TASK [container_runtime : Error out if requested Docker is too old] **************************************************************
+2018-06-11 15:34:54,904 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:54,917 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:54,930 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:54,943 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:54,956 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:54,970 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:54,982 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:54,995 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:54,996 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:55,007 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:55,017 p=15871 u=root |  TASK [container_runtime : Fail if Docker version requested but downgrade is required] ********************************************
+2018-06-11 15:34:55,046 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:55,059 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:55,071 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:55,083 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:55,097 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:55,110 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:55,122 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:55,135 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:55,136 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:55,149 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:55,160 p=15871 u=root |  TASK [container_runtime : Error out if attempting to upgrade Docker across the 1.10 boundary] ************************************
+2018-06-11 15:34:55,188 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:55,200 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:55,213 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:55,225 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:55,239 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:55,253 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:55,277 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:55,278 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:34:55,283 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:34:55,297 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:34:55,307 p=15871 u=root |  TASK [container_runtime : Install Docker] ****************************************************************************************
+2018-06-11 15:34:55,347 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:34:55,360 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:34:55,373 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:34:55,390 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:34:55,403 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:34:55,415 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:34:55,428 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:34:55,428 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:38,840 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:35:39,925 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:35:39,935 p=15871 u=root |  TASK [container_runtime : Ensure docker.service.d directory exists] **************************************************************
+2018-06-11 15:35:40,402 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:35:40,404 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:35:40,443 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:35:40,454 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:35:40,475 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:35:40,479 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:35:40,482 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:35:40,489 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:35:40,501 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:35:40,503 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:35:40,513 p=15871 u=root |  TASK [container_runtime : Configure Docker service unit file] ********************************************************************
+2018-06-11 15:35:41,571 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:35:41,576 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:35:41,579 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:35:41,584 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:35:41,586 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:35:41,589 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:35:41,592 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:35:41,595 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:35:41,602 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:35:41,604 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:35:41,614 p=15871 u=root |  TASK [container_runtime : stat] **************************************************************************************************
+2018-06-11 15:35:42,067 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:35:42,091 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:35:42,122 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:35:42,126 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:35:42,132 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:35:42,164 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:35:42,169 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:35:42,180 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:35:42,181 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:35:42,185 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:35:42,196 p=15871 u=root |  TASK [container_runtime : Set registry params] ***********************************************************************************
+2018-06-11 15:35:42,850 p=15871 u=root |  changed: [master1.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,853 p=15871 u=root |  changed: [master2.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,868 p=15871 u=root |  changed: [node2.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,869 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,883 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,890 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,895 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,914 p=15871 u=root |  changed: [infranode2.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,915 p=15871 u=root |  changed: [node3.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,917 p=15871 u=root |  changed: [support1.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,920 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,921 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,925 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,926 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,941 p=15871 u=root |  changed: [infranode1.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,943 p=15871 u=root |  changed: [node1.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,944 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,945 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,952 p=15871 u=root |  changed: [loadbalancer1.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,953 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,954 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,955 p=15871 u=root |  changed: [master3.861b.internal] => (item={u'reg_conf_var': u'ADD_REGISTRY', u'reg_flag': u'--add-registry', u'reg_fact_val': [u'registry.access.redhat.com']})
+2018-06-11 15:35:42,958 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,959 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,965 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,970 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,971 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,975 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'reg_conf_var': u'BLOCK_REGISTRY', u'reg_flag': u'--block-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,976 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,980 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'reg_conf_var': u'INSECURE_REGISTRY', u'reg_flag': u'--insecure-registry', u'reg_fact_val': []}) 
+2018-06-11 15:35:42,993 p=15871 u=root |  TASK [container_runtime : Place additional/blocked/insecure registries in /etc/containers/registries.conf] ***********************
+2018-06-11 15:35:43,023 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:43,035 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:43,048 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:43,060 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:43,074 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:43,088 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:43,100 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:43,113 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:43,116 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:43,131 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:43,141 p=15871 u=root |  TASK [container_runtime : Set Proxy Settings] ************************************************************************************
+2018-06-11 15:35:43,341 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,342 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,342 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,343 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,344 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,346 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,347 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,348 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,349 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,351 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,352 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,352 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,353 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,355 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,356 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,357 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,367 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,368 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,369 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,378 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,378 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,383 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,384 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,385 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,390 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'reg_conf_var': u'HTTP_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,405 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,407 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,415 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'reg_conf_var': u'HTTPS_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,427 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,437 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'reg_conf_var': u'NO_PROXY', u'reg_fact_val': u''}) 
+2018-06-11 15:35:43,448 p=15871 u=root |  TASK [container_runtime : Set various Docker options] ****************************************************************************
+2018-06-11 15:35:43,917 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:35:43,952 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:35:43,960 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:35:43,962 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:35:44,025 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:35:44,027 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:35:44,042 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:35:44,045 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:35:44,056 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:35:44,060 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:35:44,070 p=15871 u=root |  TASK [container_runtime : stat] **************************************************************************************************
+2018-06-11 15:35:44,515 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:35:44,527 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:35:44,551 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:35:44,561 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:35:44,581 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:35:44,614 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:35:44,621 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:35:44,623 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:35:44,644 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:35:44,656 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:35:44,667 p=15871 u=root |  TASK [container_runtime : Configure Docker Network OPTIONS] **********************************************************************
+2018-06-11 15:35:45,112 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:35:45,141 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:35:45,168 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:35:45,174 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:35:45,186 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:35:45,200 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:35:45,218 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:35:45,238 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:35:45,244 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:35:45,258 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:35:45,268 p=15871 u=root |  TASK [container_runtime : Detect if docker is already started] *******************************************************************
+2018-06-11 15:35:45,704 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:35:45,728 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:35:45,744 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:35:45,762 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:35:45,789 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:35:45,806 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:35:45,810 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:35:45,824 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:35:45,828 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:35:45,834 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:35:45,845 p=15871 u=root |  TASK [container_runtime : Start the Docker service] ******************************************************************************
+2018-06-11 15:35:46,409 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:35:46,419 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:35:46,429 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:35:46,437 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:35:46,450 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:35:46,462 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:35:46,471 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:35:46,480 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:35:47,964 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:35:48,712 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:35:48,727 p=15871 u=root |  TASK [container_runtime : set_fact] **********************************************************************************************
+2018-06-11 15:35:48,794 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:35:48,812 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:35:48,825 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:35:48,838 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:35:48,854 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:35:48,855 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:35:48,856 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:35:48,863 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:35:48,877 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:35:48,892 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:35:48,902 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:49,113 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/container_runtime/tasks/common/post.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:35:49,150 p=15871 u=root |  TASK [container_runtime : Ensure /var/lib/containers exists] *********************************************************************
+2018-06-11 15:35:49,613 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:35:49,621 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:35:49,652 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:35:49,661 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:35:49,661 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:35:49,691 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:35:49,746 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:35:49,767 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:35:49,776 p=15871 u=root |  changed: [support1.861b.internal]
+2018-06-11 15:35:49,792 p=15871 u=root |  changed: [loadbalancer1.861b.internal]
+2018-06-11 15:35:49,803 p=15871 u=root |  TASK [container_runtime : Fix SELinux Permissions on /var/lib/containers] ********************************************************
+2018-06-11 15:35:50,347 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:35:50,374 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:35:50,378 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:35:50,447 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:35:50,467 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:35:50,472 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:35:50,485 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:35:50,494 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:35:50,508 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:35:50,511 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:35:50,513 p=15871 u=root |  RUNNING HANDLER [container_runtime : restart container runtime] ******************************************************************
+2018-06-11 15:35:50,717 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:50,749 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:53,504 p=15871 u=root |  changed: [master1.861b.internal]
+2018-06-11 15:35:53,521 p=15871 u=root |  changed: [infranode1.861b.internal]
+2018-06-11 15:35:53,593 p=15871 u=root |  changed: [node3.861b.internal]
+2018-06-11 15:35:53,603 p=15871 u=root |  changed: [master2.861b.internal]
+2018-06-11 15:35:53,612 p=15871 u=root |  changed: [master3.861b.internal]
+2018-06-11 15:35:53,620 p=15871 u=root |  changed: [node1.861b.internal]
+2018-06-11 15:35:53,669 p=15871 u=root |  changed: [node2.861b.internal]
+2018-06-11 15:35:53,703 p=15871 u=root |  changed: [infranode2.861b.internal]
+2018-06-11 15:35:53,718 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:53,972 p=15871 u=root |  included: /usr/share/ansible/openshift-ansible/roles/container_runtime/tasks/registry_auth.yml for master1.861b.internal, master2.861b.internal, master3.861b.internal, infranode1.861b.internal, infranode2.861b.internal, node1.861b.internal, node2.861b.internal, node3.861b.internal, loadbalancer1.861b.internal, support1.861b.internal
+2018-06-11 15:35:54,003 p=15871 u=root |  TASK [container_runtime : Check for credentials file for registry auth] **********************************************************
+2018-06-11 15:35:54,034 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:54,047 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:54,061 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:54,074 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:54,087 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:54,101 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:54,114 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:54,127 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:54,128 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:54,138 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:54,149 p=15871 u=root |  TASK [container_runtime : Create credentials for docker cli registry auth] *******************************************************
+2018-06-11 15:35:54,179 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:54,192 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:54,205 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:54,218 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:54,231 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:54,244 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:54,256 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:54,271 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:54,271 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:54,285 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:54,295 p=15871 u=root |  TASK [container_runtime : Create credentials for docker cli registry auth (alternative)] *****************************************
+2018-06-11 15:35:54,325 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:54,339 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:54,352 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:54,366 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:54,379 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:54,398 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:54,411 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:54,424 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:54,425 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:54,436 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:54,447 p=15871 u=root |  TASK [container_runtime : stat the docker data dir] ******************************************************************************
+2018-06-11 15:35:54,902 p=15871 u=root |  ok: [master1.861b.internal]
+2018-06-11 15:35:54,922 p=15871 u=root |  ok: [master2.861b.internal]
+2018-06-11 15:35:54,949 p=15871 u=root |  ok: [infranode2.861b.internal]
+2018-06-11 15:35:54,955 p=15871 u=root |  ok: [infranode1.861b.internal]
+2018-06-11 15:35:54,959 p=15871 u=root |  ok: [master3.861b.internal]
+2018-06-11 15:35:54,973 p=15871 u=root |  ok: [node2.861b.internal]
+2018-06-11 15:35:54,987 p=15871 u=root |  ok: [node3.861b.internal]
+2018-06-11 15:35:54,988 p=15871 u=root |  ok: [support1.861b.internal]
+2018-06-11 15:35:54,991 p=15871 u=root |  ok: [node1.861b.internal]
+2018-06-11 15:35:54,992 p=15871 u=root |  ok: [loadbalancer1.861b.internal]
+2018-06-11 15:35:55,003 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:55,033 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:55,047 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:55,060 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:55,073 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:55,087 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:55,100 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:55,113 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:55,126 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:55,127 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:55,138 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:55,149 p=15871 u=root |  TASK [container_runtime : Fail quickly if openshift_docker_options are set] ******************************************************
+2018-06-11 15:35:55,179 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:55,193 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:55,207 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:55,220 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:55,235 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:55,248 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:55,261 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:55,275 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:55,276 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:55,288 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:55,298 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:55,328 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:55,341 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:55,355 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:55,368 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:55,382 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:55,395 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:55,408 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:55,422 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:55,423 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:55,433 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:55,444 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:55,474 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:55,487 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:55,501 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:55,514 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:55,529 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:55,542 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:55,555 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:55,568 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:55,569 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:55,579 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:55,590 p=15871 u=root |  TASK [container_runtime : Install Docker so we can use the client] ***************************************************************
+2018-06-11 15:35:55,620 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:55,633 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:55,646 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:55,660 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:55,675 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:55,687 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:55,701 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:55,714 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:55,715 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:55,726 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:55,737 p=15871 u=root |  TASK [container_runtime : Disable Docker] ****************************************************************************************
+2018-06-11 15:35:55,766 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:55,780 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:55,794 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:55,809 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:55,823 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:55,836 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:55,850 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:55,864 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:55,865 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:55,876 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:55,886 p=15871 u=root |  TASK [container_runtime : Ensure proxies are in the atomic.conf] *****************************************************************
+2018-06-11 15:35:55,917 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:55,930 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:55,943 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:55,956 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:55,971 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:55,983 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:55,996 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:56,009 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:56,010 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:56,021 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:56,031 p=15871 u=root |  TASK [container_runtime : debug] *************************************************************************************************
+2018-06-11 15:35:56,061 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:56,075 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:56,088 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:56,102 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:56,116 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:56,130 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:56,142 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:56,155 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:56,159 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:56,171 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:56,181 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:56,211 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:56,225 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:56,238 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:56,251 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:56,268 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:56,281 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:56,294 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:56,308 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:56,309 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:56,321 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:56,331 p=15871 u=root |  TASK [container_runtime : Pre-pull Container Engine System Container image] ******************************************************
+2018-06-11 15:35:56,362 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:56,376 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:56,390 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:56,404 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:56,419 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:56,432 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:56,446 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:56,459 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:56,460 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:56,472 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:56,483 p=15871 u=root |  TASK [container_runtime : Ensure container-engine.service.d directory exists] ****************************************************
+2018-06-11 15:35:56,513 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:56,526 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:56,539 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:56,553 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:56,567 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:56,580 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:56,593 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:56,606 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:56,607 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:56,618 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:56,628 p=15871 u=root |  TASK [container_runtime : Ensure /etc/docker directory exists] *******************************************************************
+2018-06-11 15:35:56,658 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:56,672 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:56,685 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:56,699 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:56,714 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:56,727 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:56,740 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:56,754 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:56,755 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:56,767 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:56,777 p=15871 u=root |  TASK [container_runtime : Install Container Engine System Container] *************************************************************
+2018-06-11 15:35:56,808 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:56,822 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:56,835 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:56,848 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:56,863 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:56,876 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:56,889 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:56,903 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:56,904 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:56,915 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:56,925 p=15871 u=root |  TASK [container_runtime : Configure Container Engine Service File] ***************************************************************
+2018-06-11 15:35:56,956 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:56,969 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:56,982 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:56,996 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:57,011 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:57,024 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:57,037 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:57,051 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:57,051 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:57,062 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:57,073 p=15871 u=root |  TASK [container_runtime : Configure Container Engine] ****************************************************************************
+2018-06-11 15:35:57,103 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:57,116 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:57,130 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:57,143 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:57,158 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:57,171 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:57,184 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:57,198 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:57,199 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:57,210 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:57,220 p=15871 u=root |  TASK [container_runtime : Start the container-engine service] ********************************************************************
+2018-06-11 15:35:57,251 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:57,265 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:57,279 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:57,292 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:57,307 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:57,321 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:57,335 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:57,348 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:57,349 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:57,360 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:57,370 p=15871 u=root |  TASK [container_runtime : set_fact] **********************************************************************************************
+2018-06-11 15:35:57,401 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:57,414 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:57,428 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:57,440 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:57,455 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:57,468 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:57,481 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:57,494 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:57,496 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:57,507 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:57,517 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:57,548 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:57,561 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:57,574 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:57,588 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:57,603 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:57,615 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:57,629 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:57,642 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:57,643 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:57,654 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:57,664 p=15871 u=root |  TASK [container_runtime : Check we are not using node as a Docker container with CRI-O] ******************************************
+2018-06-11 15:35:57,695 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:57,710 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:57,723 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:57,737 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:57,752 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:57,765 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:57,778 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:57,791 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:57,792 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:57,804 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:57,815 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:57,846 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:57,860 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:57,873 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:57,886 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:57,901 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:57,914 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:57,927 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:57,940 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:57,941 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:57,956 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:57,966 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:35:57,997 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:58,010 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:58,023 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:58,037 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:58,052 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:58,066 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:58,079 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:58,092 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:58,093 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:58,104 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:58,114 p=15871 u=root |  TASK [container_runtime : Check that overlay is in the kernel] *******************************************************************
+2018-06-11 15:35:58,145 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:58,158 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:58,172 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:58,186 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:58,201 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:58,214 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:58,228 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:58,242 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:58,243 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:58,253 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:58,264 p=15871 u=root |  TASK [container_runtime : Add overlay to modprobe.d] *****************************************************************************
+2018-06-11 15:35:58,295 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:58,309 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:58,323 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:58,338 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:58,351 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:58,365 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:58,379 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:58,393 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:58,393 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:58,404 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:58,415 p=15871 u=root |  TASK [container_runtime : Manually modprobe overlay into the kernel] *************************************************************
+2018-06-11 15:35:58,445 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:58,458 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:58,471 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:58,486 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:58,499 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:58,514 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:58,527 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:58,540 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:58,541 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:58,553 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:58,564 p=15871 u=root |  TASK [container_runtime : Enable and start systemd-modules-load] *****************************************************************
+2018-06-11 15:35:58,595 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:58,608 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:58,624 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:58,636 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:58,650 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:58,664 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:58,677 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:58,690 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:58,691 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:58,702 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:58,713 p=15871 u=root |  TASK [container_runtime : Ensure proxies are in the atomic.conf] *****************************************************************
+2018-06-11 15:35:58,744 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:58,757 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:58,770 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:58,785 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:58,799 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:58,813 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:58,826 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:58,840 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:58,841 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:58,852 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:58,862 p=15871 u=root |  TASK [container_runtime : debug] *************************************************************************************************
+2018-06-11 15:35:58,894 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:58,908 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:58,920 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:58,936 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:58,949 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:58,963 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:58,976 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:58,989 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:58,990 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:59,001 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:59,012 p=15871 u=root |  TASK [container_runtime : Pre-pull CRI-O System Container image] *****************************************************************
+2018-06-11 15:35:59,042 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:59,055 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:59,068 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:59,083 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:59,096 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:59,110 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:59,122 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:59,135 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:59,136 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:59,147 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:59,158 p=15871 u=root |  TASK [container_runtime : Install CRI-O System Container] ************************************************************************
+2018-06-11 15:35:59,188 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:59,201 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:59,216 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:59,229 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:59,241 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:59,255 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:59,268 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:59,281 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:59,282 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:59,294 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:59,305 p=15871 u=root |  TASK [container_runtime : Remove CRI-O default configuration files] **************************************************************
+2018-06-11 15:35:59,335 p=15871 u=root |  skipping: [master1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,336 p=15871 u=root |  skipping: [master1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,352 p=15871 u=root |  skipping: [master2.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,353 p=15871 u=root |  skipping: [master2.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,368 p=15871 u=root |  skipping: [master3.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,369 p=15871 u=root |  skipping: [master3.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,384 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,385 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,399 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,400 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,414 p=15871 u=root |  skipping: [node1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,415 p=15871 u=root |  skipping: [node1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,428 p=15871 u=root |  skipping: [node2.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,429 p=15871 u=root |  skipping: [node2.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,442 p=15871 u=root |  skipping: [node3.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,443 p=15871 u=root |  skipping: [node3.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,446 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,447 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,457 p=15871 u=root |  skipping: [support1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:35:59,463 p=15871 u=root |  skipping: [support1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:35:59,474 p=15871 u=root |  TASK [container_runtime : Create the CRI-O configuration] ************************************************************************
+2018-06-11 15:35:59,505 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:59,518 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:59,532 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:59,547 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:59,560 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:59,574 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:59,587 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:59,601 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:59,602 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:59,613 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:59,623 p=15871 u=root |  TASK [container_runtime : Ensure CNI configuration directory exists] *************************************************************
+2018-06-11 15:35:59,653 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:35:59,666 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:35:59,680 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:35:59,695 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:35:59,708 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:35:59,721 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:35:59,734 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:35:59,747 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:35:59,749 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:35:59,763 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:35:59,773 p=15871 u=root |  TASK [container_runtime : Add iptables allow rules] ******************************************************************************
+2018-06-11 15:35:59,803 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,817 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,833 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,848 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,861 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,875 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,889 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,902 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,908 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,923 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:35:59,934 p=15871 u=root |  TASK [container_runtime : Remove iptables rules] *********************************************************************************
+2018-06-11 15:36:00,078 p=15871 u=root |  TASK [container_runtime : Add firewalld allow rules] *****************************************************************************
+2018-06-11 15:36:00,108 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,121 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,135 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,148 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,163 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,178 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,191 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,204 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,209 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,224 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:00,235 p=15871 u=root |  TASK [container_runtime : Remove firewalld allow rules] **************************************************************************
+2018-06-11 15:36:00,379 p=15871 u=root |  TASK [container_runtime : Configure the CNI network] *****************************************************************************
+2018-06-11 15:36:00,409 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:00,422 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:00,435 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:00,449 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:00,462 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:00,477 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:00,489 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:00,503 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:00,504 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:00,515 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:00,526 p=15871 u=root |  TASK [container_runtime : Create /etc/sysconfig/crio-storage] ********************************************************************
+2018-06-11 15:36:00,556 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:00,570 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:00,583 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:00,596 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:00,609 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:00,624 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:00,637 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:00,651 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:00,652 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:00,663 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:00,673 p=15871 u=root |  TASK [container_runtime : Create /etc/sysconfig/crio-network] ********************************************************************
+2018-06-11 15:36:00,704 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:00,717 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:00,732 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:00,745 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:00,759 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:00,774 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:00,788 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:00,802 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:00,803 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:00,815 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:00,825 p=15871 u=root |  TASK [container_runtime : Start the CRI-O service] *******************************************************************************
+2018-06-11 15:36:00,856 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:00,869 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:00,882 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:00,896 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:00,909 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:00,924 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:00,937 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:00,950 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:00,951 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:00,962 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:00,973 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:36:01,004 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:01,017 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:01,030 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:01,043 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:01,057 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:01,072 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:01,084 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:01,098 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:01,099 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:01,109 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:01,120 p=15871 u=root |  TASK [container_runtime : Fail if Atomic Host since this is an rpm request] ******************************************************
+2018-06-11 15:36:01,151 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:01,164 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:01,178 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:01,192 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:01,206 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:01,221 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:01,234 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:01,248 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:01,249 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:01,260 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:01,270 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:36:01,301 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:01,315 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:01,328 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:01,342 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:01,355 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:01,370 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:01,383 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:01,396 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:01,397 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:01,413 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:01,423 p=15871 u=root |  TASK [container_runtime : Check that overlay is in the kernel] *******************************************************************
+2018-06-11 15:36:01,453 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:01,467 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:01,480 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:01,493 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:01,506 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:01,522 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:01,535 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:01,549 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:01,550 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:01,561 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:01,572 p=15871 u=root |  TASK [container_runtime : Add overlay to modprobe.d] *****************************************************************************
+2018-06-11 15:36:01,602 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:01,615 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:01,628 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:01,642 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:01,657 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:01,670 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:01,683 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:01,696 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:01,697 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:01,708 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:01,718 p=15871 u=root |  TASK [container_runtime : Manually modprobe overlay into the kernel] *************************************************************
+2018-06-11 15:36:01,749 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:01,762 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:01,775 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:01,789 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:01,805 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:01,817 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:01,830 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:01,843 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:01,844 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:01,856 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:01,867 p=15871 u=root |  TASK [container_runtime : Enable and start systemd-modules-load] *****************************************************************
+2018-06-11 15:36:01,898 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:01,911 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:01,925 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:01,938 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:01,952 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:01,966 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:01,979 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:01,992 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:01,993 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:02,004 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:02,015 p=15871 u=root |  TASK [container_runtime : Install cri-o] *****************************************************************************************
+2018-06-11 15:36:02,046 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:02,060 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:02,074 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:02,088 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:02,102 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:02,116 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:02,129 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:02,142 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:02,143 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:02,154 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:02,164 p=15871 u=root |  TASK [container_runtime : Remove CRI-O default configuration files] **************************************************************
+2018-06-11 15:36:02,194 p=15871 u=root |  skipping: [master1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,195 p=15871 u=root |  skipping: [master1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,209 p=15871 u=root |  skipping: [master2.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,210 p=15871 u=root |  skipping: [master2.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,224 p=15871 u=root |  skipping: [master3.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,225 p=15871 u=root |  skipping: [master3.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,240 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,241 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,255 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,256 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,269 p=15871 u=root |  skipping: [node1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,270 p=15871 u=root |  skipping: [node1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,285 p=15871 u=root |  skipping: [node2.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,285 p=15871 u=root |  skipping: [node2.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,300 p=15871 u=root |  skipping: [node3.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,300 p=15871 u=root |  skipping: [node3.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,302 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,302 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,313 p=15871 u=root |  skipping: [support1.861b.internal] => (item=/etc/cni/net.d/200-loopback.conf) 
+2018-06-11 15:36:02,318 p=15871 u=root |  skipping: [support1.861b.internal] => (item=/etc/cni/net.d/100-crio-bridge.conf) 
+2018-06-11 15:36:02,329 p=15871 u=root |  TASK [container_runtime : Create the CRI-O configuration] ************************************************************************
+2018-06-11 15:36:02,359 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:02,373 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:02,386 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:02,399 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:02,413 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:02,427 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:02,440 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:02,453 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:02,454 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:02,465 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:02,475 p=15871 u=root |  TASK [container_runtime : Ensure CNI configuration directory exists] *************************************************************
+2018-06-11 15:36:02,506 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:02,519 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:02,532 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:02,545 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:02,559 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:02,572 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:02,585 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:02,598 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:02,599 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:02,611 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:02,621 p=15871 u=root |  TASK [container_runtime : Add iptables allow rules] ******************************************************************************
+2018-06-11 15:36:02,651 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,665 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,679 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,694 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,708 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,722 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,735 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,749 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,754 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,769 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,780 p=15871 u=root |  TASK [container_runtime : Remove iptables rules] *********************************************************************************
+2018-06-11 15:36:02,925 p=15871 u=root |  TASK [container_runtime : Add firewalld allow rules] *****************************************************************************
+2018-06-11 15:36:02,954 p=15871 u=root |  skipping: [master1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,968 p=15871 u=root |  skipping: [master2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,981 p=15871 u=root |  skipping: [master3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:02,996 p=15871 u=root |  skipping: [infranode1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:03,010 p=15871 u=root |  skipping: [infranode2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:03,024 p=15871 u=root |  skipping: [node1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:03,038 p=15871 u=root |  skipping: [node2.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:03,051 p=15871 u=root |  skipping: [node3.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:03,056 p=15871 u=root |  skipping: [loadbalancer1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:03,070 p=15871 u=root |  skipping: [support1.861b.internal] => (item={u'port': u'10010/tcp', u'service': u'crio'}) 
+2018-06-11 15:36:03,081 p=15871 u=root |  TASK [container_runtime : Remove firewalld allow rules] **************************************************************************
+2018-06-11 15:36:03,226 p=15871 u=root |  TASK [container_runtime : Configure the CNI network] *****************************************************************************
+2018-06-11 15:36:03,255 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:03,268 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:03,281 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:03,296 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:03,310 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:03,324 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:03,336 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:03,350 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:03,351 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:03,362 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:03,372 p=15871 u=root |  TASK [container_runtime : Create /etc/sysconfig/crio-network] ********************************************************************
+2018-06-11 15:36:03,402 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:03,415 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:03,428 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:03,443 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:03,455 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:03,469 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:03,482 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:03,495 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:03,496 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:03,507 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:03,517 p=15871 u=root |  TASK [container_runtime : Start the CRI-O service] *******************************************************************************
+2018-06-11 15:36:03,548 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:03,561 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:03,576 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:03,591 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:03,604 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:03,618 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:03,632 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:03,646 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:03,646 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:03,657 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:03,667 p=15871 u=root |  TASK [container_runtime : include_tasks] *****************************************************************************************
+2018-06-11 15:36:03,698 p=15871 u=root |  skipping: [master1.861b.internal]
+2018-06-11 15:36:03,711 p=15871 u=root |  skipping: [master2.861b.internal]
+2018-06-11 15:36:03,725 p=15871 u=root |  skipping: [master3.861b.internal]
+2018-06-11 15:36:03,740 p=15871 u=root |  skipping: [infranode1.861b.internal]
+2018-06-11 15:36:03,753 p=15871 u=root |  skipping: [infranode2.861b.internal]
+2018-06-11 15:36:03,766 p=15871 u=root |  skipping: [node1.861b.internal]
+2018-06-11 15:36:03,779 p=15871 u=root |  skipping: [node2.861b.internal]
+2018-06-11 15:36:03,792 p=15871 u=root |  skipping: [node3.861b.internal]
+2018-06-11 15:36:03,793 p=15871 u=root |  skipping: [loadbalancer1.861b.internal]
+2018-06-11 15:36:03,805 p=15871 u=root |  skipping: [support1.861b.internal]
+2018-06-11 15:36:03,809 p=15871 u=root |  PLAY RECAP ***********************************************************************************************************************
+2018-06-11 15:36:03,809 p=15871 u=root |  infranode1.861b.internal   : ok=60   changed=13   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  infranode2.861b.internal   : ok=60   changed=13   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  loadbalancer1.861b.internal : ok=65   changed=14   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  localhost                  : ok=13   changed=0    unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  master1.861b.internal      : ok=71   changed=14   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  master2.861b.internal      : ok=64   changed=13   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  master3.861b.internal      : ok=64   changed=13   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  node1.861b.internal        : ok=60   changed=13   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  node2.861b.internal        : ok=60   changed=13   unreachable=0    failed=0   
+2018-06-11 15:36:03,810 p=15871 u=root |  node3.861b.internal        : ok=60   changed=13   unreachable=0    failed=0   
+2018-06-11 15:36:03,811 p=15871 u=root |  support1.861b.internal     : ok=63   changed=14   unreachable=0    failed=0   
+2018-06-11 15:36:03,811 p=15871 u=root |  INSTALLER STATUS *****************************************************************************************************************
+2018-06-11 15:36:03,813 p=15871 u=root |  Initialization             : Complete (0:00:22)
