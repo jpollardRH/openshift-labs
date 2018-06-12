@@ -1,0 +1,6 @@
+spec:
+  capacity:
+    storage: 10Gi 
+  accessModes:
+  - ReadWriteMany
+  nfs: 

@@ -1,0 +1,3 @@
+    server: support1.861b.internal 
+  persistentVolumeReclaimPolicy: Recycle 
+
