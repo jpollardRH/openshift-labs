@@ -1,0 +1,15 @@
+kind: NetworkPolicy
+apiVersion: extensions/v1beta1
+metadata:
+  name: allow-27107
+spec:
+ podSelector:
+ ingress:
+ - from: 
+   - podSelector:
+       matchLabels:
+         app: mongodb
+   ports:
+   - protocol: TCP
+     port: 27107
+
