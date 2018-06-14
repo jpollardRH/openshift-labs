@@ -18,6 +18,9 @@ deployment_type=openshift-enterprise
 
 containerized=false
 
+# Configure the NetworkPolicy SDN plugin
+os_sdn_network_plugin_name='redhat/openshift-ovs-networkpolicy'
+
 #openshift_master_cluster_method= #should default to native
 
 openshift_master_cluster_hostname=loadbalancer1.861b.internal
@@ -103,7 +106,8 @@ masters
 etcd
 nodes
 nfs
-#glusterfs
+new-nodes
+glusterfs
 
 [lb]
 loadbalancer1.861b.internal
@@ -134,14 +138,15 @@ node2.861b.internal openshift_hostname=node2.861b.internal  openshift_node_label
 node3.861b.internal openshift_hostname=node3.861b.internal  openshift_node_labels="{'env':'app', 'cluster': '861b'}"
 
 ## These are CNS nodes
-# support1.861b.internal openshift_hostname=support1.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
-# support2.861b.internal openshift_hostname=support2.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
-# support3.861b.internal openshift_hostname=support3.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
+[new_nodes]
+support1.861b.internal openshift_hostname=support1.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
+support2.861b.internal openshift_hostname=support2.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
+support3.861b.internal openshift_hostname=support3.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
 
 [nfs]
 support1.861b.internal openshift_hostname=support1.861b.internal
 
-#[glusterfs]
-# support1.861b.internal glusterfs_devices='[ "/dev/xvdd" ]'
-# support2.861b.internal glusterfs_devices='[ "/dev/xvdd" ]'
-# support3.861b.internal glusterfs_devices='[ "/dev/xvdd" ]'
+[glusterfs]
+support1.861b.internal glusterfs_devices='[ "/dev/xvdd" ]'
+support2.861b.internal glusterfs_devices='[ "/dev/xvdd" ]'
+support3.861b.internal glusterfs_devices='[ "/dev/xvdd" ]'
