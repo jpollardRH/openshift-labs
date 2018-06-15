@@ -1,0 +1,13 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: hello-openshift-autoscaling-policy
+spec:
+  scaleTargetRef:
+    kind: DeploymentConfig 
+    name: hello-openshift
+    apiVersion: apps.openshift.io/v1
+  minReplicas: 1 
+  maxReplicas: 5 
+  cpuUtilization:
+    targetPercentage: 80 

@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gluster-registry-service
+spec:
+  ports:
+  - port: 1
+---
+apiVersion: v1
+kind: Endpoints
+metadata:
+  name: gluster-registry-endpoints
+subsets:
+  - addresses:
+      - ip: 192.199.0.209
+    ports:
+      - port: 1
+  - addresses:
+      - ip: 192.199.0.146
+    ports:
+      - port: 1
+  - addresses:
+      - ip: 192.199.0.204
+    ports:
+      - port: 1
+

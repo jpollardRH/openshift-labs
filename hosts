@@ -106,7 +106,6 @@ masters
 etcd
 nodes
 nfs
-new-nodes
 glusterfs
 
 [lb]
@@ -138,7 +137,6 @@ node2.861b.internal openshift_hostname=node2.861b.internal  openshift_node_label
 node3.861b.internal openshift_hostname=node3.861b.internal  openshift_node_labels="{'env':'app', 'cluster': '861b'}"
 
 ## These are CNS nodes
-[new_nodes]
 support1.861b.internal openshift_hostname=support1.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
 support2.861b.internal openshift_hostname=support2.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
 support3.861b.internal openshift_hostname=support3.861b.internal  openshift_node_labels="{'env':'glusterfs', 'cluster': '861b'}"
