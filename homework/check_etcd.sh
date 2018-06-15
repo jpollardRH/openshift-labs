@@ -1,0 +1,1 @@
+etcdctl --endpoints=https://master1.4535.internal:2379,https://master2.4535.internal:2379,https://master3.4535.internal:2379 --cert-file=/etc/origin/master/master.etcd-client.crt --key-file=/etc/origin/master/master.etcd-client.key --ca-file=/etc/origin/master/master.etcd-ca.crt cluster-health
